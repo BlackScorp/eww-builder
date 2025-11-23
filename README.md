@@ -1,5 +1,5 @@
 # eww-builder
-A docker setup to compile eww bar and download just the binary.
+A docker setup to compile eww bar and download just the binary. so we dont have the dev dependencies on the host system
 
 # usage
 
