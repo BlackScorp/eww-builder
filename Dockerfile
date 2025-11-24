@@ -1,8 +1,8 @@
-FROM alpine:latest
+FROM debian:trixie-slim
 
 
-RUN apk update && apk add --no-cache \
-    cargo git pkgconf glib pango gtk+3.0-dev gdk-pixbuf cairo glib libgcc rustc-dev libdbusmenu-glib-dev libdbusmenu-gtk3-dev gtk-layer-shell-dev
+RUN apt update && apt install -y \
+    git rustc cargo pkg-config libcairo2-dev libcairo-gobject2 build-essential libgtk-3-dev libdbusmenu-gtk3-dev
 
 RUN mkdir -p /eww
 WORKDIR /eww
